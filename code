@@ -1,0 +1,29 @@
+def get_unique_elements(set1, set2, set3):
+    unique_elements = set()
+
+    for element in set1:
+        if element not in set2 and element not in set3:
+            unique_elements.add(element)
+
+    for element in set2:
+        if element not in set1 and element not in set3:
+            unique_elements.add(element)
+
+    for element in set3:
+        if element not in set1 and element not in set2:
+            unique_elements.add(element)
+
+    sorted_elements = sorted(unique_elements)
+    return sorted_elements
+
+
+# Given input sets
+set1 = {11, 10, 20, 30, 40, 50}
+set2 = {25, 30, 40, 50, 60, 70}
+set3 = {3, 9, 20, 30, 40, 50, 20}
+
+# Get the unique elements
+output_set = get_unique_elements(set1, set2, set3)
+
+# Print the output set
+print(output_set)
