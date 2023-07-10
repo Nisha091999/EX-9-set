@@ -1,0 +1,40 @@
+def get_unique_elements(set1, set2, set3):
+
+This line defines a function named get_unique_elements that takes three sets (set1, set2, and set3) as input parameters.
+unique_elements = set()
+
+This line initializes an empty set called unique_elements to store the unique elements from the input sets.
+for element in set1:
+
+This line starts a loop that iterates over each element in set1.
+if element not in set2 and element not in set3:
+
+This line checks if the current element is not present in set2 and set3.
+unique_elements.add(element)
+
+This line adds the current element to the unique_elements set if it satisfies the condition in the previous line.
+The next two for loops (lines 8-10 and 12-14) perform similar operations as explained above, but for set2 and set3 respectively.
+
+sorted_elements = sorted(unique_elements)
+
+This line creates a new list called sorted_elements by sorting the elements in the unique_elements set in ascending order.
+return sorted_elements
+
+This line returns the sorted_elements list as the result of the function.
+set1 = {11, 10, 20, 30, 40, 50}
+
+This line creates a set named set1 with the values 11, 10, 20, 30, 40, and 50.
+set2 = {25, 30, 40, 50, 60, 70}
+
+This line creates a set named set2 with the values 25, 30, 40, 50, 60, and 70.
+set3 = {3, 9, 20, 30, 40, 50, 20}
+
+This line creates a set named set3 with the values 3, 9, 20, 30, 40, 50, and 20.
+output_set = get_unique_elements(set1, set2, set3)
+
+This line calls the get_unique_elements function with set1, set2, and set3 as arguments, and assigns the returned value to output_set.
+print(output_set)
+
+This line prints the output_set, which contains the unique elements from set1, set2, and set3 after sorting.
+Overall, the code takes three input sets, finds the elements that are unique to each set (not present in the other two sets), 
+combines them into a set, sorts the unique elements, and returns the sorted elements as the output. Finally, it prints the sorted output set.
